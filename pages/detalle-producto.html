@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle Producto - EcoMarket</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" href="../assets/img/eco.png" type="image/png">
+</head>
+<body>
+
+    <header>
+        <a href="home.html" class="logo-container">
+            <img src="../assets/img/eco.png" alt="EcoMarket Logo" class="logo">
+            <span class="brand">EcoMarket</span>
+        </a>
+
+        <nav>
+            <ul>
+                <li><a href="home.html">Inicio</a></li>
+                <li><a href="productos.html" class="active">Productos</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <div class="acciones-usuario">
+            <a href="login.html" class="btn-login">Iniciar sesion</a>
+            <div class="cart-icon" id="cartIcon">
+                <span class="cart-count" id="cartCount">0</span>
+                <span class="cart-label">Carrito</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="detalle-page">
+
+        <a href="productos.html" class="volver-productos">Volver a productos</a>
+
+        <section class="detalle-producto" id="detalleProducto">
+            <div class="detalle-img">
+                <img id="detalleImagen" src="" alt="">
+            </div>
+
+            <div class="detalle-info">
+                <span id="detalleCategoria" class="categoria-tag"></span>
+                <h1 id="detalleNombre"></h1>
+                <p id="detalleDescripcion"></p>
+
+                <div class="precio-row">
+                    <span class="precio">$<span id="detallePrecio"></span></span>
+                    <span class="precio-antes">$<span id="detallePrecioAntes"></span></span>
+                </div>
+
+                <button id="btnAgregarDetalle" class="btn-add">
+                    Agregar al carrito
+                </button>
+            </div>
+        </section>
+
+    </main>
+
+    <div id="cartSidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h3>Tu Carrito</h3>
+            <button class="close-cart" onclick="toggleCart()">&times;</button>
+        </div>
+
+        <div id="cartItems" class="cart-items">
+            <p class="empty-cart">Tu carrito esta vacio</p>
+        </div>
+
+        <div class="cart-cupon">
+            <label for="cupon">Cupon de descuento:</label>
+            <div class="cupon-input">
+                <input type="text" id="cupon" placeholder="Ej: ECO10">
+                <button onclick="aplicarCupon()">Aplicar</button>
+            </div>
+            <p id="cupon-msg"></p>
+        </div>
+
+        <div class="cart-footer">
+            <p>Subtotal: $<span id="subtotal">0</span></p>
+            <p id="descuento-linea" class="oculto">Descuento (10%): -$<span id="descuento">0</span></p>
+            <p class="total">Total: $<span id="total">0</span></p>
+            <button class="btn-checkout" onclick="finalizarCompra()">Finalizar Compra</button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div>
+                <h4>EcoMarket</h4>
+                <p>Comprometidos con el medio ambiente y la sustentabilidad.</p>
+            </div>
+            <div>
+                <h4>Contacto</h4>
+                <p>contacto@ecomarket.cl</p>
+                <p>+56 9 1234 5678</p>
+            </div>
+            <div>
+                <h4>Siguenos</h4>
+                <div class="footer-links">
+                    <a href="#">Instagram</a>
+                    <a href="#">Facebook</a>
+                    <a href="#">TikTok</a>
+                </div>
+            </div>
+        </div>
+
+        <p class="copyright">© 2026 EcoMarket. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="../js/productos-data.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/detalle-producto.js"></script>
+
+</body>
+</html>
