@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Editar Producto - EcoMarket</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" href="../assets/img/eco.png" type="image/png">
+</head>
+
+<body>
+
+    <!-- ============================================
+         HEADER
+         ============================================ -->
+
+    <header>
+
+        <a href="admin.html" class="logo-container">
+            <img src="../assets/img/eco.png" alt="EcoMarket Logo" class="logo">
+            <span class="brand">EcoMarket</span>
+        </a>
+
+        <nav>
+            <ul>
+                <li><a href="admin.html">Inicio Admin</a></li>
+                <li><a href="admin-productos.html">Productos</a></li>
+                <li><a href="home.html">Volver a la tienda</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+
+    <!-- ============================================
+         EDITAR PRODUCTO
+         ============================================ -->
+
+    <main class="admin-main">
+
+        <h1>Editar Producto</h1>
+
+        <p>
+            Modifica los datos del producto seleccionado.
+        </p>
+
+
+        <form id="editarProductoForm" class="form-admin" novalidate>
+
+
+            <!-- CODIGO -->
+            <div class="form-group">
+
+                <label for="codigo">
+                    Codigo del producto *
+                </label>
+
+                <input
+                    type="text"
+                    id="codigo"
+                    name="codigo"
+                    minlength="3"
+                    required
+                >
+
+                <span class="error-msg" id="codigoError"></span>
+
+            </div>
+
+
+            <!-- NOMBRE -->
+            <div class="form-group">
+
+                <label for="nombreProducto">
+                    Nombre *
+                </label>
+
+                <input
+                    type="text"
+                    id="nombreProducto"
+                    name="nombreProducto"
+                    maxlength="100"
+                    required
+                >
+
+                <span class="error-msg" id="nombreProductoError"></span>
+
+            </div>
+
+
+            <!-- DESCRIPCION -->
+            <div class="form-group">
+
+                <label for="descripcion">
+                    Descripcion
+                </label>
+
+                <textarea
+                    id="descripcion"
+                    name="descripcion"
+                    rows="4"
+                    maxlength="500"
+                ></textarea>
+
+                <span class="error-msg" id="descripcionError"></span>
+
+            </div>
+
+
+            <!-- PRECIO -->
+            <div class="form-group">
+
+                <label for="precio">
+                    Precio *
+                </label>
+
+                <input
+                    type="number"
+                    id="precio"
+                    name="precio"
+                    min="0"
+                    step="0.01"
+                    required
+                >
+
+                <span class="error-msg" id="precioError"></span>
+
+            </div>
+
+
+            <!-- STOCK Y STOCK CRITICO -->
+            <div class="form-row">
+
+                <div class="form-group">
+
+                    <label for="stock">
+                        Stock *
+                    </label>
+
+                    <input
+                        type="number"
+                        id="stock"
+                        name="stock"
+                        min="0"
+                        step="1"
+                        required
+                    >
+
+                    <span class="error-msg" id="stockError"></span>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="stockCritico">
+                        Stock critico
+                    </label>
+
+                    <input
+                        type="number"
+                        id="stockCritico"
+                        name="stockCritico"
+                        min="0"
+                        step="1"
+                    >
+
+                    <span class="error-msg" id="stockCriticoError"></span>
+
+                </div>
+
+            </div>
+
+
+            <!-- CATEGORIA -->
+            <div class="form-group">
+
+                <label for="categoria">
+                    Categoria *
+                </label>
+
+                <select id="categoria" name="categoria" required>
+
+                    <option value="">Seleccione una categoria</option>
+
+                    <option value="cuidado">
+                        Cuidado Personal
+                    </option>
+
+                    <option value="alimentos">
+                        Alimentos Organicos
+                    </option>
+
+                    <option value="vestimenta">
+                        Vestimenta Sustentable
+                    </option>
+
+                    <option value="tecnologia">
+                        Tecnologia Eco
+                    </option>
+
+                </select>
+
+                <span class="error-msg" id="categoriaError"></span>
+
+            </div>
+
+
+            <!-- IMAGEN -->
+            <div class="form-group">
+
+                <label for="imagen">
+                    Imagen
+                </label>
+
+                <input
+                    type="text"
+                    id="imagen"
+                    name="imagen"
+                >
+
+            </div>
+
+
+            <!-- BOTONES -->
+            <div class="form-botones">
+
+                <button
+                    type="submit"
+                    class="btn-admin"
+                >
+                    Guardar cambios
+                </button>
+
+                <a
+                    href="admin-productos.html"
+                    class="btn-cancelar"
+                >
+                    Cancelar
+                </a>
+
+            </div>
+
+        </form>
+
+    </main>
+
+
+    <!-- ============================================
+         FOOTER
+         ============================================ -->
+
+    <footer>
+
+        <div class="footer-content">
+
+            <div>
+                <h4>EcoMarket</h4>
+                <p>Administracion de productos.</p>
+            </div>
+
+            <div>
+                <h4>Contacto</h4>
+                <p>contacto@ecomarket.cl</p>
+            </div>
+
+        </div>
+
+        <p class="copyright">
+            © 2026 EcoMarket
+        </p>
+
+    </footer>
+
+
+    <!-- ============================================
+         SCRIPTS
+         ============================================ -->
+
+
+    <script src="../js/permisos.js"></script>
+    <script src="../js/productos-data.js"></script>
+    <script src="../js/admin-editar-producto.js"></script>
+
+</body>
+
+</html>
