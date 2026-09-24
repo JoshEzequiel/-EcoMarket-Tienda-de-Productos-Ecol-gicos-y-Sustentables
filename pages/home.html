@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EcoMarket - Productos Ecológicos y Sustentables</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="icon" href="../assets/img/eco.png" type="image/png" />
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <a href="home.html" class="logo-container">
+            <img src="../assets/img/eco.png" alt="EcoMarket Logo" class="logo" />
+            <span class="brand">EcoMarket</span>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="home.html" class="active">Inicio</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+        <div class="acciones-usuario">
+            <a href="login.html" class="btn-login">Iniciar sesión</a>
+            <!-- ✅ AGREGADO id="cartIcon" -->
+            <div class="cart-icon" id="cartIcon">
+                🛒
+                <span class="cart-count" id="cartCount">0</span>
+                <span class="cart-label">Carrito</span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+    <!-- HERO -->
+    <section class="hero" id="inicio">
+        <div class="hero-content">
+            <h1>Iniciativa "Cero Plástico" 🌍</h1>
+            <p>Únete a nuestra misión por un planeta sin plásticos. Productos sustentables, residuo cero y 100% eco-amigables para ti y tu familia.</p>
+            <a href="productos.html" class="btn">Descubre Productos</a>
+        </div>
+    </section>
+
+    <!-- PRODUCTOS DESTACADOS -->
+    <section class="productos" id="productos">
+        <h2 class="section-title">Productos Destacados</h2>
+        <p class="section-subtitle">Selección eco-amigable para tu día a día 🌱</p>
+
+        <!-- ✅ ID CORREGIDO: productosDestacados (no productosGrid) -->
+        <div class="productos-grid" id="productosDestacados"></div>
+
+        <div class="ver-todos-wrapper">
+            <a href="productos.html" class="btn-ver-todos">Ver catálogo completo →</a>
+        </div>
+    </section>
+
+    <!-- BLOG -->
+    <section class="blog" id="blog">
+        <h2 class="section-title">Blog y Noticias</h2>
+        <p class="section-subtitle">Aprende más sobre sustentabilidad y vida consciente</p>
+
+        <div class="blog-grid">
+            <article class="blog-card">
+                <div class="blog-img">♻️</div>
+                <div class="blog-content">
+                    <h3>5 formas de reducir el plástico en tu rutina diaria</h3>
+                    <p class="blog-date">Publicado: 15 de Marzo, 2025</p>
+                    <p>Descubre cómo pequeños cambios en tu día a día pueden generar un gran impacto ambiental...</p>
+                    <button class="btn-read" onclick="leerBlog(1)">Leer más →</button>
+                </div>
+            </article>
+            <article class="blog-card">
+                <div class="blog-img">🐰</div>
+                <div class="blog-content">
+                    <h3>¿Qué significa realmente el sello Cruelty-Free?</h3>
+                    <p class="blog-date">Publicado: 22 de Marzo, 2025</p>
+                    <p>El sello Cruelty-Free garantiza que un producto no fue testeado en animales. Te explicamos cómo identificarlo...</p>
+                    <button class="btn-read" onclick="leerBlog(2)">Leer más →</button>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    </main>
+
+    <!-- MODAL BLOG -->
+    <div id="blogModal" class="modal">
+        <div class="modal-content">
+            <button class="close" onclick="cerrarBlog()">&times;</button>
+            <div id="blogModalBody"></div>
+        </div>
+    </div>
+
+    <!-- CARRITO LATERAL -->
+    <div id="cartSidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h3>🛒 Tu Carrito</h3>
+            <button class="close-cart" onclick="toggleCart()">&times;</button>
+        </div>
+        <div id="cartItems" class="cart-items">
+            <p class="empty-cart">Tu carrito está vacío</p>
+        </div>
+        <div class="cart-cupon">
+            <label for="cupon">Cupón de descuento:</label>
+            <div class="cupon-input">
+                <input type="text" id="cupon" placeholder="Ej: ECO10">
+                <button onclick="aplicarCupon()">Aplicar</button>
+            </div>
+            <p id="cupon-msg"></p>
+        </div>
+        <div class="cart-footer">
+            <p>Subtotal: $<span id="subtotal">0</span></p>
+            <p id="descuento-linea" class="oculto">Descuento (10%): -$<span id="descuento">0</span></p>
+            <p class="total">Total: $<span id="total">0</span></p>
+            <button class="btn-checkout" onclick="finalizarCompra()">Finalizar Compra</button>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer id="contacto">
+        <div class="footer-content">
+            <div>
+                <h4>🌱 EcoMarket</h4>
+                <p>Comprometidos con el medio ambiente y la sustentabilidad en Chile.</p>
+            </div>
+            <div>
+                <h4>Contacto</h4>
+                <p>📧 contacto@ecomarket.cl</p>
+                <p>📞 +56 9 1234 5678</p>
+                <p>📍 Santiago, Chile</p>
+            </div>
+            <div>
+                <h4>Síguenos</h4>
+                <div class="footer-links">
+                    <a href="#">Instagram</a>
+                    <a href="#">Facebook</a>
+                    <a href="#">TikTok</a>
+                </div>
+            </div>
+        </div>
+        <p class="copyright">© 2026 EcoMarket. Todos los derechos reservados. 🌱</p>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script src="../js/productos-data.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/home.js"></script>
+
+    
+</body>
+</html>

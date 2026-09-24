@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EcoMarket - Cero Plastico</title>
+
+    <!-- Usamos la misma hoja CSS externa del proyecto -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" href="assets/img/eco.png" type="image/png" />
+</head>
+
+<body class="pagina-carga">
+
+    <div class="carga-container">
+        <img src="assets/img/eco.png" alt="EcoMarket Logo" class="carga-logo" />
+        <h1 class="carga-brand">EcoMarket</h1>
+        <p class="carga-subtitle">Cero Plastico</p>
+        <div class="carga-spinner"></div>
+        <p class="carga-texto">Cargando...</p>
+    </div>
+
+    <!-- Redireccion simple hacia la pagina principal -->
+    <script>
+        setTimeout(function () {
+            window.location.href = 'pages/home.html';
+        }, 1500);
+    </script>
+
+</body>
+</html>
