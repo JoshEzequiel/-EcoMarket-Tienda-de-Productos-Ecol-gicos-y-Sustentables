@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Productos - EcoMarket</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="icon" href="../assets/img/eco.png" type="image/png" />
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <a href="home.html" class="logo-container">
+            <img src="../assets/img/eco.png" alt="EcoMarket Logo" class="logo" />
+            <span class="brand">EcoMarket</span>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="../pages/home.html">Inicio</a></li>
+                <li><a href="../pages/productos.html" class="active">Productos</a></li>
+                <li><a href="../pages/nosotros.html">Nosotros</a></li>
+                <li><a href="../pages/blog.html">Blog</a></li>
+                <li><a href="../pages/contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+        <div class="acciones-usuario">
+            <a href="login.html" class="btn-login">Iniciar sesión</a>
+            <div class="cart-icon" id="cartIcon">
+                <span class="cart-count" id="cartCount">0</span>
+                <span class="cart-label">Carrito</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- CONTENIDO -->
+    <main class="productos-page">
+
+        <section class="productos-hero">
+            <h1>Nuestro Catálogo Sustentable 🌿</h1>
+            <p>Productos 100% ecológicos, residuo cero y cruelty-free</p>
+        </section>
+
+        <!-- FILTROS -->
+        <section class="filtros-wrapper">
+            <div class="filtros" id="filtros">
+                <button class="filter-btn active" data-categoria="todos">Todos</button>
+                <button class="filter-btn" data-categoria="cuidado">🧴 Cuidado Personal</button>
+                <button class="filter-btn" data-categoria="alimentos">🥗 Alimentos</button>
+                <button class="filter-btn" data-categoria="vestimenta">👕 Vestimenta</button>
+                <button class="filter-btn" data-categoria="tecnologia">💡 Tecnología Eco</button>
+            </div>
+        </section>
+
+        <p class="resultados-info">
+            Mostrando <strong id="numResultados">0</strong> productos
+        </p>
+
+        <section class="productos-grid" id="productosGrid"></section>
+
+        <div id="sinResultados" class="sin-resultados" style="display:none;">
+            <span>🔍</span>
+            <h3>No encontramos productos en esta categoría</h3>
+            <p>Prueba con otra categoría.</p>
+        </div>
+
+    </main>
+
+   <!-- ============================================
+         CARRITO LATERAL
+         ============================================ -->
+    <div id="cartSidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h3>🛒 Tu Carrito</h3>
+            <button class="close-cart" onclick="toggleCart()">&times;</button>
+        </div>
+        <div id="cartItems" class="cart-items">
+            <p class="empty-cart">Tu carrito está vacío</p>
+        </div>
+        <div class="cart-cupon">
+            <label for="cupon">Cupón de descuento:</label>
+            <div class="cupon-input">
+                <input type="text" id="cupon" placeholder="Ej: ECO10">
+                <button onclick="aplicarCupon()">Aplicar</button>
+            </div>
+            <p id="cupon-msg"></p>
+        </div>
+        <div class="cart-footer">
+            <p>Subtotal: $<span id="subtotal">0</span></p>
+            <p id="descuento-linea" class="oculto">Descuento (10%): -$<span id="descuento">0</span></p>
+            <p class="total">Total: $<span id="total">0</span></p>
+            <button class="btn-checkout" onclick="finalizarCompra()">Finalizar Compra</button>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <div>
+                <h4>🌱 EcoMarket</h4>
+                <p>Comprometidos con el medio ambiente y la sustentabilidad.</p>
+            </div>
+            <div>
+                <h4>Contacto</h4>
+                <p>📧 contacto@ecomarket.cl</p>
+                <p>📞 +56 9 1234 5678</p>
+            </div>
+            <div>
+                <h4>Síguenos</h4>
+                <div class="footer-links">
+                    <a href="#">Instagram</a>
+                    <a href="#">Facebook</a>
+                    <a href="#">TikTok</a>
+                </div>
+            </div>
+        </div>
+        <p class="copyright">© 2026 EcoMarket. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="../js/productos-data.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/productos.js"></script>
+</body>
+</html>
