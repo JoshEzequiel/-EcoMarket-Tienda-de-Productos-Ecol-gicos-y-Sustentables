@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crear cuenta - EcoMarket</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="icon" href="../assets/img/eco.png" type="image/png" />
+</head>
+
+<body>
+
+    <!-- ============================================
+         HEADER
+         ============================================ -->
+    <header>
+        <a href="home.html" class="logo-container">
+            <img src="../assets/img/eco.png" alt="EcoMarket Logo" class="logo" />
+            <span class="brand">EcoMarket</span>
+        </a>
+
+        <nav>
+            <ul>
+                <li><a href="home.html">Inicio</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <div class="acciones-usuario">
+            <a href="login.html" class="btn-login">Iniciar sesión</a>
+
+            <div class="cart-icon" id="cartIcon">
+                🛒
+                <span class="cart-count" id="cartCount">0</span>
+                <span class="cart-label">Carrito</span>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- ============================================
+         MAIN - REGISTRO
+         ============================================ -->
+    <main class="registro-main">
+
+        <div class="registro-container">
+
+            <div class="registro-card">
+
+                <div class="registro-header">
+                    <h2>Crear cuenta 🌱</h2>
+
+                    <p class="registro-subtitle">
+                        Únete a la comunidad EcoMarket y comienza a vivir sustentable
+                    </p>
+                </div>
+
+
+                <!-- FORMULARIO DE REGISTRO -->
+                <form id="registroForm" novalidate>
+
+
+                    <!-- RUN -->
+                    <div class="form-group">
+
+                        <label for="run">
+                            RUN <span class="required">*</span>
+                        </label>
+
+                        <input
+                            type="text"
+                            id="run"
+                            name="run"
+                            placeholder="Ej: 190110222"
+                            maxlength="9"
+                            required
+                        />
+
+                        <span class="error-msg" id="runError"></span>
+
+                    </div>
+
+
+                    <!-- NOMBRE Y APELLIDOS -->
+                    <div class="form-row">
+
+                        <div class="form-group">
+
+                            <label for="nombre">
+                                Nombre <span class="required">*</span>
+                            </label>
+
+                            <input
+                                type="text"
+                                id="nombre"
+                                name="nombre"
+                                placeholder="Tu nombre"
+                                autocomplete="given-name"
+                                maxlength="50"
+                                required
+                            />
+
+                            <span class="error-msg" id="nombreError"></span>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="apellido">
+                                Apellidos <span class="required">*</span>
+                            </label>
+
+                            <input
+                                type="text"
+                                id="apellido"
+                                name="apellido"
+                                placeholder="Tus apellidos"
+                                autocomplete="family-name"
+                                maxlength="100"
+                                required
+                            />
+
+                            <span class="error-msg" id="apellidoError"></span>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- EMAIL -->
+                    <div class="form-group">
+
+                        <label for="email">
+                            Correo electrónico <span class="required">*</span>
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="usuario@gmail.com"
+                            autocomplete="email"
+                            maxlength="100"
+                            required
+                        />
+
+                        <span class="error-msg" id="emailError"></span>
+
+                    </div>
+
+
+                    <!-- FECHA DE NACIMIENTO -->
+                    <div class="form-group">
+
+                        <label for="fechaNacimiento">
+                            Fecha de nacimiento
+                        </label>
+
+                        <input
+                            type="date"
+                            id="fechaNacimiento"
+                            name="fechaNacimiento"
+                        />
+
+                        <span class="error-msg" id="fechaNacimientoError"></span>
+
+                    </div>
+
+
+                    <!-- TELEFONO -->
+                    <div class="form-group">
+
+                        <label for="telefono">
+                            Teléfono (opcional)
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="telefono"
+                            name="telefono"
+                            placeholder="+56 9 1234 5678"
+                            autocomplete="tel"
+                        />
+
+                        <span class="error-msg" id="telefonoError"></span>
+
+                    </div>
+
+
+                    <!-- REGION Y COMUNA -->
+                    <div class="form-row">
+
+                        <div class="form-group">
+
+                            <label for="region">
+                                Región <span class="required">*</span>
+                            </label>
+
+                            <select id="region" name="region" required>
+
+                                <option value="">Seleccione región</option>
+                                <option value="metropolitana">Región Metropolitana</option>
+                                <option value="valparaiso">Valparaíso</option>
+                                <option value="biobio">Biobío</option>
+
+                            </select>
+
+                            <span class="error-msg" id="regionError"></span>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="comuna">
+                                Comuna <span class="required">*</span>
+                            </label>
+
+                            <select id="comuna" name="comuna" required>
+
+                                <option value="">Seleccione comuna</option>
+
+                            </select>
+
+                            <span class="error-msg" id="comunaError"></span>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- DIRECCION -->
+                    <div class="form-group">
+
+                        <label for="direccion">
+                            Dirección <span class="required">*</span>
+                        </label>
+
+                        <input
+                            type="text"
+                            id="direccion"
+                            name="direccion"
+                            placeholder="Ej: Av. Siempre Viva 123"
+                            maxlength="300"
+                            required
+                        />
+
+                        <span class="error-msg" id="direccionError"></span>
+
+                    </div>
+
+
+                    <!-- CONTRASEÑA -->
+                    <div class="form-group">
+
+                        <label for="password">
+                            Contraseña <span class="required">*</span>
+                        </label>
+
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            placeholder="Entre 4 y 10 caracteres"
+                            autocomplete="new-password"
+                            required
+                        />
+
+                        <div class="password-strength" id="passwordStrength">
+
+                            <span class="bar" id="strengthBar1"></span>
+                            <span class="bar" id="strengthBar2"></span>
+                            <span class="bar" id="strengthBar3"></span>
+                            <span class="bar" id="strengthBar4"></span>
+
+                        </div>
+
+                        <span class="password-text" id="passwordText">
+                            Entre 4 y 10 caracteres
+                        </span>
+
+                        <span class="error-msg" id="passwordError"></span>
+
+                    </div>
+
+
+                    <!-- CONFIRMAR CONTRASEÑA -->
+                    <div class="form-group">
+
+                        <label for="passwordConfirm">
+                            Confirmar contraseña <span class="required">*</span>
+                        </label>
+
+                        <input
+                            type="password"
+                            id="passwordConfirm"
+                            name="passwordConfirm"
+                            placeholder="Repite tu contraseña"
+                            autocomplete="new-password"
+                            required
+                        />
+
+                        <span class="error-msg" id="passwordConfirmError"></span>
+
+                    </div>
+
+
+                    <!-- TIPO DE USUARIO -->
+                    <input
+                        type="hidden"
+                        id="tipoUsuario"
+                        name="tipoUsuario"
+                        value="Cliente"
+                    />
+
+
+                    <!-- TERMINOS -->
+                    <div class="checkbox-group">
+
+                        <input
+                            type="checkbox"
+                            id="terminos"
+                            name="terminos"
+                            required
+                        />
+
+                        <label for="terminos">
+
+                            Acepto los
+                            <a href="#">términos y condiciones</a>
+                            y la
+                            <a href="#">política de privacidad</a>
+
+                            <span class="required">*</span>
+
+                        </label>
+
+                    </div>
+
+                    <span class="error-msg" id="terminosError"></span>
+
+
+                    <!-- NEWSLETTER -->
+                    <div class="checkbox-group">
+
+                        <input
+                            type="checkbox"
+                            id="newsletter"
+                            name="newsletter"
+                        />
+
+                        <label for="newsletter">
+                            Quiero recibir novedades, ofertas y tips sustentables por email
+                        </label>
+
+                    </div>
+
+
+                    <!-- BOTON -->
+                    <button
+                        type="submit"
+                        class="btn-registro"
+                        id="btnRegistro"
+                    >
+                        Crear cuenta
+                    </button>
+
+
+                </form>
+
+
+                <div class="registro-footer">
+
+                    <p>
+                        ¿Ya tienes cuenta?
+                        <a href="login.html">Inicia sesión</a>
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- TOAST -->
+        <div class="toast" id="toast">
+
+            <div class="toast-title" id="toastTitle">
+                Éxito
+            </div>
+
+            <div class="toast-message" id="toastMessage">
+                Cuenta creada correctamente
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- ============================================
+         CARRITO LATERAL
+         ============================================ -->
+    <div id="cartSidebar" class="cart-sidebar">
+
+        <div class="cart-header">
+
+            <h3>🛒 Tu Carrito</h3>
+
+            <button
+                class="close-cart"
+                onclick="toggleCart()"
+            >
+                &times;
+            </button>
+
+        </div>
+
+
+        <div id="cartItems" class="cart-items">
+
+            <p class="empty-cart">
+                Tu carrito está vacío
+            </p>
+
+        </div>
+
+
+        <div class="cart-cupon">
+
+            <label for="cupon">
+                Cupón de descuento:
+            </label>
+
+            <div class="cupon-input">
+
+                <input
+                    type="text"
+                    id="cupon"
+                    placeholder="Ej: ECO10"
+                >
+
+                <button onclick="aplicarCupon()">
+                    Aplicar
+                </button>
+
+            </div>
+
+            <p id="cupon-msg"></p>
+
+        </div>
+
+
+        <div class="cart-footer">
+
+            <p>
+                Subtotal: $
+                <span id="subtotal">0</span>
+            </p>
+
+            <p id="descuento-linea" class="oculto">
+                Descuento (10%): -$
+                <span id="descuento">0</span>
+            </p>
+
+            <p class="total">
+                Total: $
+                <span id="total">0</span>
+            </p>
+
+            <button
+                class="btn-checkout"
+                onclick="finalizarCompra()"
+            >
+                Finalizar Compra
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- ============================================
+         FOOTER
+         ============================================ -->
+    <footer>
+
+        <div class="footer-content">
+
+            <div>
+
+                <h4>🌱 EcoMarket</h4>
+
+                <p>
+                    Comprometidos con el medio ambiente y la sustentabilidad en Chile.
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h4>Contacto</h4>
+
+                <p>📧 contacto@ecomarket.cl</p>
+                <p>📞 +56 9 1234 5678</p>
+                <p>📍 Santiago, Chile</p>
+
+            </div>
+
+
+            <div>
+
+                <h4>Síguenos</h4>
+
+                <div class="footer-links">
+
+                    <a href="#">Instagram</a>
+                    <a href="#">Facebook</a>
+                    <a href="#">TikTok</a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <p class="copyright">
+            © 2026 EcoMarket. Todos los derechos reservados. 🌱
+        </p>
+
+    </footer>
+
+
+    <!-- ============================================
+         SCRIPTS
+         ============================================ -->
+
+    <script src="../js/productos-data.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/registro.js"></script>
+
+</body>
+</html>

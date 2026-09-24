@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contacto - EcoMarket</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="icon" href="../assets/img/eco.png" type="image/png" />
+</head>
+<body>
+
+    <!-- ============================================
+         HEADER
+         ============================================ -->
+    <header>
+        <a href="home.html" class="logo-container">
+            <img src="../assets/img/eco.png" alt="EcoMarket Logo" class="logo" />
+            <span class="brand">EcoMarket</span>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="home.html">Inicio</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contacto.html" class="active">Contacto</a></li>
+            </ul>
+        </nav>
+        <div class="acciones-usuario">
+            <a href="login.html" class="btn-login">Iniciar sesión</a>
+            <div class="cart-icon" id="cartIcon">
+                🛒
+                <span class="cart-count" id="cartCount">0</span>
+                <span class="cart-label">Carrito</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- ============================================
+         MAIN - CONTACTO
+         ============================================ -->
+    <main class="contacto-main">
+
+        <!-- HERO INTERNO -->
+        <section class="contacto-hero">
+            <h1>Contáctanos 🌱</h1>
+            <p>¿Tienes preguntas, sugerencias o quieres colaborar con nosotros? Escríbenos</p>
+        </section>
+
+        <div class="contacto-wrapper">
+
+            <!-- ============================================
+                 COLUMNA IZQUIERDA: FORMULARIO
+                 ============================================ -->
+            <section class="contacto-form-container">
+                <h2>Envíanos un mensaje</h2>
+
+                <!-- Mensaje de éxito -->
+                <div id="contactSuccess" class="contact-success">
+                    ✅ ¡Mensaje enviado correctamente! Te responderemos pronto.
+                </div>
+
+                <form id="contactForm" novalidate>
+
+                    <div class="field">
+                        <label for="nombre">Nombre completo *</label>
+                        <input
+                            type="text"
+                            id="nombre"
+                            name="nombre"
+                            placeholder="Tu nombre"
+                            autocomplete="name"
+                            maxlength="100"
+                            required
+                        />
+                        <span class="error-msg" id="nombreError"></span>
+                    </div>
+
+                    <div class="field">
+                        <label for="emailContacto">Correo electrónico *</label>
+                        <input
+                            type="email"
+                            id="emailContacto"
+                            name="email"
+                            placeholder="tu@correo.com"
+                            autocomplete="email"
+                            maxlength="100"
+                            required
+                        />
+                        <span class="error-msg" id="emailContactoError"></span>
+                    </div>
+
+                    <div class="field">
+                        <label for="telefono">Teléfono (opcional)</label>
+                        <input
+                            type="tel"
+                            id="telefono"
+                            name="telefono"
+                            placeholder="+56 9 1234 5678"
+                            autocomplete="tel"
+                        />
+                        <span class="error-msg" id="telefonoError"></span>
+                    </div>
+
+                    <div class="field">
+                        <label for="asunto">Asunto *</label>
+                        <select id="asunto" name="asunto" required>
+                            <option value="">Selecciona un asunto</option>
+                            <option value="consulta">Consulta general</option>
+                            <option value="pedido">Estado de mi pedido</option>
+                            <option value="reclamo">Reclamo</option>
+                            <option value="sugerencia">Sugerencia</option>
+                            <option value="colaboracion">Colaboración / Alianza</option>
+                            <option value="otros">Otros</option>
+                        </select>
+                        <span class="error-msg" id="asuntoError"></span>
+                    </div>
+
+                    <div class="field">
+                        <label for="mensaje">Mensaje *</label>
+                        <textarea
+                            id="mensaje"
+                            name="mensaje"
+                            rows="5"
+                            placeholder="Escribe tu mensaje aquí..."
+                            maxlength="500"
+                            required
+                        ></textarea>
+                        <span class="error-msg" id="mensajeError"></span>
+                    </div>
+
+                    <div class="field checkbox">
+                        <input type="checkbox" id="acepto" required />
+                        <label for="acepto">
+                            Acepto la <a href="#">política de privacidad</a> y el tratamiento de mis datos. *
+                        </label>
+                    </div>
+                    <span class="error-msg" id="aceptoError"></span>
+
+                    <button type="submit" class="btn" id="btnEnviar">
+                        Enviar mensaje
+                    </button>
+                </form>
+            </section>
+
+            <!-- ============================================
+                 COLUMNA DERECHA: INFO DE CONTACTO
+                 ============================================ -->
+            <aside class="contacto-info">
+
+                <div class="info-card">
+                    <div class="info-icon">📧</div>
+                    <h3>Email</h3>
+                    <p>contacto@ecomarket.cl</p>
+                    <p>ventas@ecomarket.cl</p>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-icon">📞</div>
+                    <h3>Teléfono / WhatsApp</h3>
+                    <p>+56 9 1234 5678</p>
+                    <p>Lun a Vie · 09:00 – 18:00</p>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-icon">📍</div>
+                    <h3>Dirección</h3>
+                    <p>Santiago, Región Metropolitana</p>
+                    <p>Chile</p>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-icon">🚚</div>
+                    <h3>Envíos</h3>
+                    <p>Despacho a todo Chile</p>
+                    <p>Envíos en 2-5 días hábiles</p>
+                </div>
+
+                <div class="info-redes">
+                    <h3>Síguenos</h3>
+                    <div class="redes-links">
+                        <a href="#" class="red-social">📱 Instagram</a>
+                        <a href="#" class="red-social">👍 Facebook</a>
+                        <a href="#" class="red-social">🎵 TikTok</a>
+                    </div>
+                </div>
+
+            </aside>
+        </div>
+
+        <!-- ============================================
+             FAQ RÁPIDO
+             ============================================ -->
+        <section class="faq-section">
+            <h2 class="section-title">Preguntas Frecuentes</h2>
+
+            <div class="faq-grid">
+                <div class="faq-card">
+                    <h3>📦 ¿Hacen envíos a todo Chile?</h3>
+                    <p>Sí, despachamos a todas las regiones del país. Los tiempos varían entre 2 y 5 días hábiles.</p>
+                </div>
+                <div class="faq-card">
+                    <h3>💳 ¿Qué métodos de pago aceptan?</h3>
+                    <p>Tarjetas de crédito, débito, transferencia bancaria y pago en efectivo (efectivo en puntos autorizados).</p>
+                </div>
+                <div class="faq-card">
+                    <h3>♻️ ¿Los empaques son ecológicos?</h3>
+                    <p>100%. Usamos cajas de cartón reciclado, relleno de papel y cinta de papel. Cero plástico.</p>
+                </div>
+                <div class="faq-card">
+                    <h3>🐰 ¿Los productos son cruelty-free?</h3>
+                    <p>Todos nuestros productos de cuidado personal están certificados como libres de crueldad animal.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ============================================
+         CARRITO LATERAL
+         ============================================ -->
+    <div id="cartSidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h3>🛒 Tu Carrito</h3>
+            <button class="close-cart" onclick="toggleCart()">&times;</button>
+        </div>
+        <div id="cartItems" class="cart-items">
+            <p class="empty-cart">Tu carrito está vacío</p>
+        </div>
+        <div class="cart-cupon">
+            <label for="cupon">Cupón de descuento:</label>
+            <div class="cupon-input">
+                <input type="text" id="cupon" placeholder="Ej: ECO10">
+                <button onclick="aplicarCupon()">Aplicar</button>
+            </div>
+            <p id="cupon-msg"></p>
+        </div>
+        <div class="cart-footer">
+            <p>Subtotal: $<span id="subtotal">0</span></p>
+            <p id="descuento-linea" class="oculto">Descuento (10%): -$<span id="descuento">0</span></p>
+            <p class="total">Total: $<span id="total">0</span></p>
+            <button class="btn-checkout" onclick="finalizarCompra()">Finalizar Compra</button>
+        </div>
+    </div>
+
+    <!-- ============================================
+         FOOTER
+         ============================================ -->
+    <footer id="contacto-footer">
+        <div class="footer-content">
+            <div>
+                <h4>🌱 EcoMarket</h4>
+                <p>Comprometidos con el medio ambiente y la sustentabilidad en Chile.</p>
+            </div>
+            <div>
+                <h4>Contacto</h4>
+                <p>📧 contacto@ecomarket.cl</p>
+                <p>📞 +56 9 1234 5678</p>
+                <p>📍 Santiago, Chile</p>
+            </div>
+            <div>
+                <h4>Síguenos</h4>
+                <div class="footer-links">
+                    <a href="#">Instagram</a>
+                    <a href="#">Facebook</a>
+                    <a href="#">TikTok</a>
+                </div>
+            </div>
+        </div>
+        <p class="copyright">© 2026 EcoMarket. Todos los derechos reservados. 🌱</p>
+    </footer>
+
+    <!-- ============================================
+         SCRIPTS
+         ============================================ -->
+    <script src="../js/productos-data.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/contacto.js"></script>
+</body>
+</html>
