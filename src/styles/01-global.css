@@ -1,0 +1,40 @@
+/* Colores base, fuentes y elementos comunes */
+
+:root {
+  font-family: system-ui,-apple-system,Segoe UI,Arial,sans-serif;
+  color: #213c2c;
+  background: #f8faf6;
+  font-synthesis: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: #213c2c;
+  background: #f8faf6;
+}
+
+a {
+  color: #226a47;
+}
+
+a:hover {
+  color: #194b33;
+}
+
+button,input,select,textarea {
+  font: inherit;
+}
+
+button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible {
+  outline: 3px solid #d0a34d;
+  outline-offset: 2px;
+}
+
+h1,h2,h3,h4 {
+  font-weight: 760;
+  letter-spacing: -.025em;
+}

@@ -1,0 +1,154 @@
+/* Cabecera, logo, buscador y menu */
+
+.cinta-superior {
+  background: #1c4d37;
+  color: #fff;
+  text-align: center;
+  font-size: .77rem;
+  padding: 8px 12px;
+  letter-spacing: .02em;
+}
+
+.cabecera {
+  background: #fff;
+  box-shadow: 0 2px 14px #173b2710;
+}
+
+.logo {
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  color: #16472f;
+  font-size: 1.45rem;
+  font-weight: 850;
+  white-space: nowrap;
+  letter-spacing: -.06em;
+  line-height: .85;
+}
+
+.logo:hover {
+  color: #16472f;
+}
+
+.logo-hoja {
+  display: grid;
+  place-items: center;
+  transform: rotate(-20deg);
+  font-size: 1.5rem;
+  color: #83a958;
+}
+
+.logo-segundo {
+  color: #77a454;
+}
+
+.logo small {
+  display: block;
+  letter-spacing: .19em;
+  font-size: .49rem;
+  color: #758477;
+  margin-top: 8px;
+  font-weight: 700;
+}
+
+.buscador {
+  border: 1px solid #dfe6dd;
+  border-radius: 100px;
+  overflow: hidden;
+  max-width: 440px;
+  flex: 1;
+  background: #f9faf7;
+}
+
+.buscador input {
+  border: 0;
+  outline: 0;
+  min-width: 0;
+  padding: 10px 20px;
+  background: transparent;
+  flex: 1;
+  font-size: .91rem;
+}
+
+.buscador button {
+  border: 0;
+  background: #2b7050;
+  color: white;
+  width: 55px;
+  font-size: 1.7rem;
+  cursor: pointer;
+}
+
+.boton-outline {
+  border: 1px solid #acc5b3;
+  border-radius: 8px;
+  padding: 10px 15px;
+  text-decoration: none;
+  background: #fff;
+  color: #275a3e;
+  display: inline-block;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.boton-outline:hover {
+  background: #eff7ef;
+  color: #1c4d37;
+}
+
+.boton-outline.btn-sm {
+  padding: 7px 12px;
+}
+
+.menu-usuario {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.boton-carrito {
+  border-radius: 8px;
+  background: #226746;
+  color: white;
+  padding: 9px 12px;
+  text-decoration: none;
+  white-space: nowrap;
+  font-weight: 700;
+}
+
+.boton-carrito:hover {
+  color: #fff;
+  background: #155235;
+}
+
+.cantidad {
+  font-size: .77rem;
+  border-radius: 100px;
+  background: #eef9e3;
+  color: #185337;
+  padding: 2px 7px;
+  margin-left: 3px;
+}
+
+.menu-principal {
+  border-top: 1px solid #edf0e9;
+}
+
+.enlace-menu {
+  padding: 14px 0 13px;
+  display: inline-block;
+  color: #3f5143;
+  text-decoration: none;
+  font-weight: 650;
+  font-size: .92rem;
+  border-bottom: 3px solid transparent;
+}
+
+.enlace-menu:hover,.enlace-menu.activo {
+  color: #2a7951;
+  border-bottom-color: #71aa5f;
+}
+
+.menu-movil {
+  font-size: 1.4rem;
+}

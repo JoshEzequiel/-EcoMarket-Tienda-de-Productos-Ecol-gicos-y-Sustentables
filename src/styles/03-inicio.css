@@ -1,0 +1,170 @@
+/* Banner principal, beneficios y secciones de inicio */
+
+.hero {
+  background: linear-gradient(105deg,#1f563c 10%,#2e7651 70%,#4f9167);
+  color: white;
+  overflow: hidden;
+}
+
+.hero .row {
+  min-height: 470px;
+}
+
+.hero h1 {
+  font-size: clamp(3rem,5.5vw,5rem);
+  font-weight: 800;
+  line-height: 1.11;
+  letter-spacing: -.06em;
+  margin: 18px 0 20px;
+}
+
+.hero h1 em {
+  color: #d0e7a7;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.hero p {
+  max-width: 560px;
+  font-size: 1.12rem;
+  line-height: 1.75;
+  color: #e7f5e8;
+}
+
+.hero-badge {
+  background: #ffffff1d;
+  border: 1px solid #ffffff38;
+  display: inline-block;
+  padding: 8px 14px;
+  border-radius: 100px;
+  font-size: .78rem;
+  font-weight: 750;
+  letter-spacing: .13em;
+}
+
+.boton-claro,.boton-hero-outline {
+  border-radius: 9px;
+  padding: 14px 22px;
+  font-weight: 800;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.boton-claro {
+  background: #e9f5c6;
+  color: #1b5739;
+}
+
+.boton-claro:hover {
+  background: white;
+  color: #1b5739;
+}
+
+.boton-hero-outline {
+  border: 1px solid #bed5c4;
+  color: white;
+}
+
+.boton-hero-outline:hover {
+  background: #ffffff1a;
+  color: white;
+}
+
+.hero-arte {
+  height: 390px;
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+
+.circulo-uno {
+  width: 340px;
+  height: 340px;
+  border: 1px solid #ffffff50;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.circulo-dos {
+  width: 280px;
+  height: 280px;
+  border: 1px dashed #ffffff55;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.hero-icono {
+  font-size: 11rem;
+  filter: drop-shadow(0 16px 20px #14332360);
+  animation: sube 6s ease-in-out infinite;
+}
+
+@keyframes sube {
+  50% {
+    transform: translateY(-14px);
+  }
+}
+
+.tarjeta-flotante {
+  position: absolute;
+  bottom: 28px;
+  right: 3%;
+  background: white;
+  box-shadow: 0 16px 35px #10261925;
+  color: #245c42;
+  padding: 16px 19px;
+  border-radius: 12px;
+  font-weight: 800;
+  display: flex;
+  gap: 12px;
+}
+
+.beneficios {
+  background: #edf4e9;
+  padding: 20px 0;
+  color: #365f47;
+}
+
+.beneficios .col-md-4 {
+  text-align: center;
+  font-size: .87rem;
+}
+
+.beneficios span {
+  color: #637b68;
+}
+
+.seccion {
+  padding-top: 56px;
+  padding-bottom: 56px;
+}
+
+.cabecera-seccion {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.cabecera-seccion h2 {
+  font-size: 2.15rem;
+  margin: 5px 0;
+}
+
+.cabecera-seccion p {
+  color: #6e7c70;
+  margin: 0;
+}
+
+.texto-etiqueta {
+  letter-spacing: .17em;
+  color: #58965b;
+  font-weight: 850;
+  font-size: .76rem;
+}
+
+.enlace-ver {
+  font-weight: 750;
+  text-decoration: none;
+}

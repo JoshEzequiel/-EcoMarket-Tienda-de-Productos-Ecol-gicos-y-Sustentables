@@ -1,0 +1,142 @@
+/* Responsive para tablet y movil y ajustes finales */
+
+@media (max-width:991px) {
+  .menu-principal {
+    display: none;
+  }
+
+  .menu-principal.menu-abierto {
+    display: block;
+  }
+
+  .menu-principal .enlace-menu {
+    display: block;
+    border: 0;
+    border-bottom: 1px solid #eee;
+    padding: 12px;
+  }
+
+  .hero .row {
+    min-height: 420px;
+  }
+
+  .hero-arte {
+    height: 300px;
+  }
+
+  .hero-icono {
+    font-size: 8rem;
+  }
+
+  .circulo-uno {
+    width: 260px;
+    height: 260px;
+  }
+
+  .circulo-dos {
+    width: 200px;
+    height: 200px;
+  }
+
+  .admin-lateral {
+    padding: 18px;
+  }
+
+  .admin-lateral nav {
+    flex-direction: row !important;
+    flex-wrap: wrap;
+  }
+
+  .admin-link {
+    padding: 8px 12px;
+  }
+
+  .admin-contenido {
+    padding: 25px 14px 45px;
+  }
+}
+
+@media (max-width:767px) {
+  .hero {
+    text-align: center;
+  }
+
+  .hero p {
+    margin: auto auto 23px;
+  }
+
+  .hero .d-flex {
+    justify-content: center;
+  }
+
+  .hero-arte {
+    height: 210px;
+  }
+
+  .hero-icono {
+    font-size: 6rem;
+  }
+
+  .circulo-uno {
+    width: 190px;
+    height: 190px;
+  }
+
+  .circulo-dos {
+    width: 150px;
+    height: 150px;
+  }
+
+  .tarjeta-flotante {
+    bottom: 0;
+    right: 0;
+    font-size: .7rem;
+    padding: 9px;
+  }
+
+  .cabecera-seccion {
+    display: block;
+  }
+
+  .cabecera-seccion .enlace-ver {
+    display: inline-block;
+    margin-top: 15px;
+  }
+
+  .tabla-carrito {
+    min-width: 640px;
+  }
+
+  .logo {
+    font-size: 1.1rem;
+  }
+
+  .logo small {
+    font-size: .42rem;
+  }
+
+  .cinta-superior {
+    font-size: .67rem;
+  }
+}
+
+@media (prefers-reduced-motion:reduce) {
+  *,*::before,*::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.ancho-blog {
+  max-width: 900px;
+}
+
+.form-registro {
+  max-width: 850px;
+}
+
+.resultado-centrado {
+  max-width: 800px;
+  margin: auto;
+}

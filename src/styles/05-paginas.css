@@ -1,0 +1,268 @@
+/* Paginas internas, formularios, pie y carrito */
+
+.titulo-pagina {
+  background: linear-gradient(100deg,#eaf3e7,#f6f8f0);
+  padding: 53px 0;
+}
+
+.titulo-pagina h1 {
+  margin: 7px 0 10px;
+  font-size: clamp(2rem,4vw,3rem);
+}
+
+.titulo-pagina p {
+  color: #69776b;
+  font-size: 1.02rem;
+  margin: 0;
+}
+
+.bloque-cero {
+  background: #e5f0dd;
+  padding: 65px 0;
+}
+
+.bloque-cero h2 {
+  font-size: 2.3rem;
+}
+
+.bloque-cero p {
+  line-height: 1.7;
+  color: #5a705f;
+  margin: 18px 0 26px;
+}
+
+.ilustracion-cero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  background: #d2e6c4;
+  border-radius: 22px;
+  min-height: 250px;
+  font-size: 8rem;
+  color: #4b9360;
+}
+
+.ilustracion-cero span {
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: #286446;
+  line-height: 1.1;
+}
+
+.pie {
+  background: #173c2c;
+  color: #dbeadd;
+}
+
+.pie .logo {
+  color: white;
+}
+
+.pie .logo small {
+  color: #c3dcc4;
+}
+
+.pie h6 {
+  color: #fff;
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+
+.pie a:not(.logo) {
+  display: block;
+  color: #c8dfcc;
+  text-decoration: none;
+  font-size: .87rem;
+  margin: 7px 0;
+}
+
+.pie a:hover {
+  color: white;
+}
+
+.pie hr {
+  border-color: #aec0af33;
+}
+
+.texto-pie {
+  max-width: 360px;
+  color: #b6cabc;
+  font-size: .91rem;
+}
+
+.aviso-vacio {
+  border: 1px dashed #acc6ae;
+  border-radius: 14px;
+  padding: 56px 24px;
+  text-align: center;
+  background: #f3f8f1;
+  color: #58715e;
+}
+
+.panel-blanco {
+  background: #fff;
+  border: 1px solid #e6ece3;
+  box-shadow: 0 10px 32px #1e42220b;
+  border-radius: 15px;
+  padding: 30px;
+}
+
+.formulario-centrado {
+  max-width: 530px;
+  margin: auto;
+}
+
+.formulario-admin {
+  max-width: 900px;
+}
+
+.form-control,.form-select {
+  border-color: #d7e1d5;
+  padding: 11px;
+}
+
+.form-control:focus,.form-select:focus {
+  border-color: #58a476;
+  box-shadow: 0 0 0 .2rem #58a47626;
+}
+
+.precio-grande {
+  font-size: 2rem;
+  color: #26724b;
+  font-weight: 850;
+}
+
+.imagen-detalle {
+  background: #edf3e7;
+  border-radius: 18px;
+  height: 430px;
+  display: grid;
+  place-items: center;
+}
+
+.imagen-detalle img {
+  max-width: 90%;
+  height: 90%;
+  object-fit: contain;
+}
+
+.aviso-suave {
+  padding: 13px 16px;
+  background: #edf5eb;
+  border-radius: 10px;
+  color: #4b7057;
+  font-size: .9rem;
+}
+
+.categoria-tarjeta {
+  background: white;
+  border: 1px solid #e2ebdf;
+  border-radius: 15px;
+  min-height: 235px;
+  text-decoration: none;
+  color: #244a32;
+  padding: 35px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 9px 24px #255a2c0b;
+}
+
+.categoria-tarjeta:hover {
+  transform: translateY(-3px);
+  color: #17653c;
+}
+
+.categoria-tarjeta h3 {
+  font-size: 1.4rem;
+}
+
+.categoria-tarjeta p {
+  color: #7a8c7e;
+}
+
+.categoria-tarjeta span:last-child {
+  font-weight: 800;
+  margin-top: auto;
+}
+
+.categoria-icono {
+  font-size: 2.6rem;
+  margin-bottom: 12px;
+}
+
+.nosotros-arte {
+  background: linear-gradient(130deg,#dcefcf,#a8d29d);
+  height: 340px;
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 5rem;
+}
+
+.nosotros-arte span {
+  font-size: 1.7rem;
+  text-align: center;
+  font-weight: 800;
+}
+
+.valor-card {
+  background: white;
+  border: 1px solid #e6ecdf;
+  border-radius: 15px;
+  padding: 27px;
+  height: 100%;
+}
+
+.valor-card h3 {
+  font-size: 1.3rem;
+}
+
+.valor-card p {
+  color: #758174;
+  line-height: 1.65;
+}
+
+.lista-blog li {
+  font-size: 1.15rem;
+  line-height: 1.85;
+  padding-bottom: 15px;
+}
+
+.contacto-lado {
+  background: #eaf3e4;
+  padding: 35px;
+  border-radius: 18px;
+  min-height: 100%;
+}
+
+.tabla-carrito th,.tabla-admin th {
+  background: #f0f6ed;
+  padding: 17px;
+  color: #42614c;
+  font-size: .85rem;
+}
+
+.tabla-carrito td,.tabla-admin td {
+  padding: 15px;
+}
+
+.mini-producto {
+  width: 57px;
+  height: 57px;
+  object-fit: contain;
+  background: #e8f0e4;
+  border-radius: 8px;
+}
+
+.cantidad-input {
+  width: 72px;
+  padding: 8px;
+}
+
+.estado-grande {
+  font-size: 4rem;
+  font-weight: 800;
+}
