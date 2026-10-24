@@ -1,63 +1,93 @@
-# EcoMarket
+# 🌱 EcoMarket - Tienda de Productos Ecológicos
 
-EcoMarket es una tienda online basica de productos ecologicos y sustentables.
+EcoMarket es una tienda online enfocada en la venta de productos ecológicos y sustentables. La idea es ofrecer una página donde los usuarios puedan revisar productos, conocer sus características y realizar compras de manera sencilla.
 
-Este proyecto fue desarrollado para la Evaluacion Parcial N 1 de Desarrollo FullStack II. La idea principal es crear una pagina web usando HTML, CSS y JavaScript, aplicando estructura semantica, estilos personalizados, validaciones de formularios y funciones basicas de carrito de compras.
+El proyecto está desarrollado con **React, JavaScript, HTML, CSS y Bootstrap**, utilizando componentes para organizar las diferentes partes de la página.
 
-## Objetivo del proyecto
+## 🛒 Funcionalidades
 
-El objetivo de EcoMarket es permitir que los usuarios puedan revisar productos ecologicos, agregarlos al carrito y aplicar un cupon de descuento ficticio llamado ECO10.
+- Página de inicio con productos destacados.
+- Catálogo de productos con buscador, categorías y ofertas.
+- Vista con información y detalles de cada producto.
+- Carrito de compras para agregar, quitar y modificar cantidades.
+- Cálculo automático de precios, descuentos y total de compra.
+- Cupón de descuento `ECO10`.
+- Registro e inicio de sesión de usuarios.
+- Validaciones de formularios, incluyendo RUN y correo electrónico.
+- Simulación del proceso de compra.
+- Página de contacto, nosotros y blog.
 
-Tambien se incluyen paginas informativas como Nosotros, Contacto, Registro, Inicio de sesion y una seccion de blog.
+## ⚙️ Panel de administración
 
-## Tecnologias utilizadas
+EcoMarket también cuenta con un panel administrativo que permite:
 
-- HTML
-- CSS
-- JavaScript
-- LocalStorage
-- GitHub
+- Agregar, editar y eliminar productos.
+- Administrar usuarios.
+- Gestionar categorías.
+- Consultar pedidos registrados.
+- Visualizar reportes e información de la tienda.
 
-## Paginas del sitio
+El acceso al panel está controlado según el rol del usuario.
 
-- Inicio
-- Productos
-- Nosotros
-- Contacto
-- Registro
-- Inicio de sesion
-- Administracion de productos
-- Administracion de usuarios
+## 💻 Tecnologías utilizadas
 
-## Funcionalidades principales
+- **React:** componentes, estados y manejo de eventos.
+- **JavaScript:** funcionalidades y lógica de la tienda.
+- **HTML y CSS:** estructura y diseño.
+- **Bootstrap:** estilos y diseño adaptable a diferentes pantallas.
+- **Vite:** ejecución y compilación del proyecto.
+- **React Router:** navegación entre páginas.
+- **LocalStorage:** almacenamiento local de productos, usuarios, carrito y pedidos.
+- **Jasmine y Karma:** pruebas unitarias.
 
-- Visualizacion de productos ecologicos.
-- Carrito de compras.
-- Guardado del carrito en LocalStorage.
-- Aplicacion del cupon ECO10 con 10% de descuento.
-- Formulario de contacto.
-- Formulario de registro.
-- Formulario de inicio de sesion.
-- Diseno adaptable para distintos tamanos de pantalla.
+## 🚀 Cómo ejecutar el proyecto
 
-## Regla de negocio principal
+Para ejecutar EcoMarket es necesario tener instalado **Node.js**.
 
-El sistema permite ingresar el cupon ECO10 en el carrito de compras.
+**1.** Descargar o clonar el repositorio.
 
-Si el cupon es correcto, se aplica un 10% de descuento al total de la compra.
+**2.** Abrir la carpeta del proyecto en Visual Studio Code.
 
-## Integrantes
+**3.** Instalar las dependencias desde la terminal:
 
-- Joshua Rios
-- Carlos Colonia
+`npm install`
 
-## Acceso administrador de prueba
+**4.** Iniciar el proyecto:
 
-Como esta primera entrega trabaja solamente con frontend y LocalStorage, se dejo un usuario de prueba para revisar el panel administrativo.
+`npm run dev`
 
-- Correo: admin@duoc.cl
-- Contrasena: 1234
+**5.** Abrir en el navegador la dirección que muestra Vite, normalmente:
 
-## Estado del proyecto
+`http://localhost:5173`
 
-Proyecto en desarrollo para la primera entrega de la evaluacion.
+## 📁 Organización del proyecto
+
+- `src/components/` — Componentes reutilizables.
+- `src/pages/` — Páginas de la tienda.
+- `src/pages/admin/` — Panel de administración.
+- `src/context/` — Manejo de estados y datos compartidos.
+- `src/data/` — Datos y operaciones de productos.
+- `src/utils/` — Funciones y validaciones.
+- `src/styles/` — Archivos CSS.
+- `public/images/` — Imágenes de los productos.
+- `tests/` — Pruebas unitarias.
+
+## 🧪 Pruebas
+
+El proyecto cuenta con **10 pruebas unitarias** realizadas con Jasmine y Karma.
+
+Para ejecutarlas:
+
+`npm test`
+
+Para comprobar la compilación del proyecto:
+
+`npm run build`
+
+## 📌 Información adicional
+
+EcoMarket utiliza `localStorage` para guardar información en el navegador, por lo que no necesita una base de datos externa para funcionar.
+
+El proceso de compra es simulado y no realiza pagos reales.
+
+El objetivo es contar con una tienda web funcional, organizada mediante componentes React y con un diseño adaptable a computadores, tablets y celulares.
